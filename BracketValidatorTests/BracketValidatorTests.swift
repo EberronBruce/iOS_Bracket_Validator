@@ -10,27 +10,34 @@ import XCTest
 
 class BracketValidatorTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+    
+    func testStack() {
+        var stack = Stack<Int>()
+        XCTAssertTrue(stack.isEmpty)
+        stack.push(1)
+        stack.push(2)
+        XCTAssertEqual(stack.peek(), 2)
+        XCTAssertEqual(stack.pop(), 2)
+        XCTAssertEqual(stack.peek(), 1)
+        XCTAssertEqual(stack.pop(), 1)
+        XCTAssertNil(stack.pop())
     }
 
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+    
+    func testBracketTrue() {
+        var string = "[(Bob) + 5]"
+        XCTAssertTrue(validateBracketsFrom(string))
+        string = "[{} test ({})]"
+        XCTAssertTrue(validateBracketsFrom(string))
+        string = "[(5+2)*3]"
+        XCTAssertTrue(validateBracketsFrom(string))
     }
-
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-        // Any test you write for XCTest can be annotated as throws and async.
-        // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
-        // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    
+    func testBracketFalse() {
+        var string = "[(Bob + 5]"
+        XCTAssertFalse(validateBracketsFrom(string))
+        string = "[} test ({})]"
+        XCTAssertFalse(validateBracketsFrom(string))
+        string = "(5+2)*3]"
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }

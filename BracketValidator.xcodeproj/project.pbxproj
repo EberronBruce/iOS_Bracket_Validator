@@ -16,6 +16,8 @@
 		7A136499287CE3FD00652A72 /* BracketValidatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A136498287CE3FD00652A72 /* BracketValidatorTests.swift */; };
 		7A1364A3287CE3FD00652A72 /* BracketValidatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1364A2287CE3FD00652A72 /* BracketValidatorUITests.swift */; };
 		7A1364A5287CE3FD00652A72 /* BracketValidatorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1364A4287CE3FD00652A72 /* BracketValidatorUITestsLaunchTests.swift */; };
+		7A82B6DA287CEAAF00D5D2F5 /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82B6D9287CEAAF00D5D2F5 /* Stack.swift */; };
+		7A82B6DC287CEECF00D5D2F5 /* ValidateBrackets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A82B6DB287CEECF00D5D2F5 /* ValidateBrackets.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		7A13649E287CE3FD00652A72 /* BracketValidatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BracketValidatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A1364A2287CE3FD00652A72 /* BracketValidatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracketValidatorUITests.swift; sourceTree = "<group>"; };
 		7A1364A4287CE3FD00652A72 /* BracketValidatorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BracketValidatorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		7A82B6D9287CEAAF00D5D2F5 /* Stack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Stack.swift; sourceTree = "<group>"; };
+		7A82B6DB287CEECF00D5D2F5 /* ValidateBrackets.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidateBrackets.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,10 @@
 		7A136480287CE3FA00652A72 /* BracketValidator */ = {
 			isa = PBXGroup;
 			children = (
-				7A136481287CE3FA00652A72 /* AppDelegate.swift */,
-				7A136483287CE3FA00652A72 /* SceneDelegate.swift */,
-				7A136485287CE3FA00652A72 /* ViewController.swift */,
-				7A136487287CE3FA00652A72 /* Main.storyboard */,
-				7A13648A287CE3FD00652A72 /* Assets.xcassets */,
-				7A13648C287CE3FD00652A72 /* LaunchScreen.storyboard */,
-				7A13648F287CE3FD00652A72 /* Info.plist */,
+				7A82B6D8287CEA5E00D5D2F5 /* View */,
+				7A82B6D7287CEA5400D5D2F5 /* ViewController */,
+				7A82B6D6287CEA4C00D5D2F5 /* Model */,
+				7A1364B2287CE4C000652A72 /* System */,
 			);
 			path = BracketValidator;
 			sourceTree = "<group>";
@@ -125,6 +126,43 @@
 				7A1364A4287CE3FD00652A72 /* BracketValidatorUITestsLaunchTests.swift */,
 			);
 			path = BracketValidatorUITests;
+			sourceTree = "<group>";
+		};
+		7A1364B2287CE4C000652A72 /* System */ = {
+			isa = PBXGroup;
+			children = (
+				7A13648C287CE3FD00652A72 /* LaunchScreen.storyboard */,
+				7A136483287CE3FA00652A72 /* SceneDelegate.swift */,
+				7A136481287CE3FA00652A72 /* AppDelegate.swift */,
+				7A13648A287CE3FD00652A72 /* Assets.xcassets */,
+				7A13648F287CE3FD00652A72 /* Info.plist */,
+			);
+			name = System;
+			sourceTree = "<group>";
+		};
+		7A82B6D6287CEA4C00D5D2F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				7A82B6D9287CEAAF00D5D2F5 /* Stack.swift */,
+				7A82B6DB287CEECF00D5D2F5 /* ValidateBrackets.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		7A82B6D7287CEA5400D5D2F5 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7A136485287CE3FA00652A72 /* ViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		7A82B6D8287CEA5E00D5D2F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7A136487287CE3FA00652A72 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,6 +296,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A82B6DA287CEAAF00D5D2F5 /* Stack.swift in Sources */,
+				7A82B6DC287CEECF00D5D2F5 /* ValidateBrackets.swift in Sources */,
 				7A136486287CE3FA00652A72 /* ViewController.swift in Sources */,
 				7A136482287CE3FA00652A72 /* AppDelegate.swift in Sources */,
 				7A136484287CE3FA00652A72 /* SceneDelegate.swift in Sources */,
